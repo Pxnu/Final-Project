@@ -126,3 +126,23 @@ nav .container {
     margin-bottom: 2.5rem; /* เว้นระยะห่างก่อนถึงปุ่มกด */
     line-height: 1.6; /* เพิ่มระยะห่างบรรทัดให้อ่านสบายตา */
 }
+
+/* จัดการปุ่ม Start playing สถานะปกติ */
+.banner-content a {
+    display: inline-block; /* สำคัญมาก: ทำให้ <a> รับค่า Padding และ Transform ได้เต็มที่ */
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    padding: 1rem 2.5rem; /* เพิ่มพื้นที่ บน-ล่าง 1rem, ซ้าย-ขวา 2.5rem ให้ปุ่มดูใหญ่และคลิกง่ายขึ้น */
+    font-size: 1.15rem; /* ขยายตัวหนังสือให้พอดีกับปุ่ม */
+    font-weight: 600; /* ทำตัวหนาให้ดูเป็นปุ่ม Call to Action */
+    border-radius: 8px; /* ปรับความโค้งมนให้ดูทันสมัย */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* ใส่เงาบางๆ ให้ปุ่มดูลอยขึ้นมาจากรูปแบนเนอร์ */
+    transition: all 0.3s ease; /* เตรียมความพร้อมสำหรับเอฟเฟกต์ตอน Hover */
+}
+
+/* จัดการปุ่มตอนเอาเมาส์ชี้ (Hover) */
+.banner-content a:hover {
+    transform: translateY(-4px) scale(1.02); /* เอฟเฟกต์: ให้ปุ่มลอยขึ้นด้านบนและขยายขนาดขึ้นนิดนึง */
+    background-color: #F6AD31; /* ปรับสีส้มให้สว่างขึ้นนิดนึง (สว่างกว่าสีเดิม) */
+    box-shadow: 0 8px 15px rgba(245, 158, 11, 0.4); /* เพิ่มเงาให้ฟุ้งขึ้น และใช้โทนสีส้ม (สีของปุ่ม) ให้ดูเรืองแสงนิดๆ */
+}
