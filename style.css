@@ -95,6 +95,7 @@ nav .container {
     /* 3. โค้ดสำหรับจัดระเบียบเนื้อหาด้านใน */
     display: flex;
     align-items: center; /* จัดให้ข้อความและปุ่มอยู่กึ่งกลางแนวตั้ง */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* แก้ไขคลาสนี้โดยเพิ่ม 2 บรรทัดล่างสุดครับ */
@@ -145,4 +146,51 @@ nav .container {
     transform: translateY(-4px) scale(1.02); /* เอฟเฟกต์: ให้ปุ่มลอยขึ้นด้านบนและขยายขนาดขึ้นนิดนึง */
     background-color: #F6AD31; /* ปรับสีส้มให้สว่างขึ้นนิดนึง (สว่างกว่าสีเดิม) */
     box-shadow: 0 8px 15px rgba(245, 158, 11, 0.4); /* เพิ่มเงาให้ฟุ้งขึ้น และใช้โทนสีส้ม (สีของปุ่ม) ให้ดูเรืองแสงนิดๆ */
+}
+
+/* recommend-section */
+.recommend .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2.25rem;
+}
+
+.recommend-header {
+    font-size: 1.5rem;
+    border-left: 6px solid var(--accent-color);
+}
+
+.recommend-header h1 {
+    margin-left: 1rem;
+}
+
+.recommend-card {
+    margin: 2rem 0;
+}
+
+.recommend-card .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.recommend-games {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.recommend-games:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recommend-games img{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
