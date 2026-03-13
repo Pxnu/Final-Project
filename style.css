@@ -189,7 +189,71 @@ nav .container {
 }
 
 .recommend-games img{
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+/* main-section */
+.main .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2.25rem;
+}
+
+.main-header {
+    font-size: 1.5rem;
+    border-left: 6px solid var(--accent-color);
+}
+
+.main-header h1 {
+    margin-left: 1rem;
+}
+
+.game-category button{
+    margin: 2rem 1rem;
+    width: 100px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    padding: .5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.game-category button:hover {
+    background-color: var(--text-color);
+    color: #FFFFFF;
+}
+
+.main-card .card-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+
+}
+
+.games {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.games:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-container .games img {
+    width: 100%;
+    max-width: 200px;
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
