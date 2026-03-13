@@ -80,3 +80,28 @@ nav .container {
 .nav-links a:hover {
     color: var(--accent-color);
 }
+
+/* banner-section */
+.banner {
+    /* 1. ใส่รูปภาพพื้นหลังตรงนี้ */
+    background-image: url('./banner/banner.png'); /* เปลี่ยนชื่อและโฟลเดอร์ให้ตรงกับไฟล์รูปของคุณนะครับ */
+    background-size: cover; /* บังคับให้รูปขยายเต็มพื้นที่ ไม่แหว่ง */
+    background-position: center; /* จัดให้จุดศูนย์กลางของรูปอยู่ตรงกลางเสมอ */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปลอกลายซ้ำกันถ้าจอใหญ่เกินไป */
+    
+    /* 2. กำหนดความสูงเพื่อให้เห็นรูปภาพ */
+    min-height: 500px; /* สามารถปรับตัวเลขความสูงได้ตามต้องการครับ */
+    
+    /* 3. โค้ดสำหรับจัดระเบียบเนื้อหาด้านใน */
+    display: flex;
+    align-items: center; /* จัดให้ข้อความและปุ่มอยู่กึ่งกลางแนวตั้ง */
+    text-align: center;    
+}
+
+/* 4. เพิ่มความกว้างให้ส่วนเนื้อหาด้านในแทน เพื่อให้ตรงกับ Nav */
+.banner .container {
+    max-width: 1440px;
+    padding: 2.25rem;
+    margin: 0 auto;
+    width: 100%; /* ให้คอนเทนต์ขยายเต็มที่ในขอบเขต 1440px */
+}
