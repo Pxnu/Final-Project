@@ -1,18 +1,18 @@
 :root {
     /* สีพื้นหลังเว็บ (สบายตา ไม่ขาวจั๊วะ) */
-    --bg-color: #F8FAFC; 
-    
+    --bg-color: #F8FAFC;
+
     /* สีพื้นหลังการ์ดเกม (ให้รูปเกมโดดเด่น) */
-    --card-bg: #FFFFFF; 
-    
+    --card-bg: #FFFFFF;
+
     /* สีหลัก (หัวข้อ, แถบเมนู, โลโก้) */
-    --primary-color: #5A7D7C; 
-    
+    --primary-color: #5A7D7C;
+
     /* สีตัวอักษร (เทาเข้ม อ่านง่าย ไม่ล้าสายตา) */
-    --text-color: #334155; 
-    
+    --text-color: #334155;
+
     /* สีเน้น (ปุ่มกด, ป้ายเตือนความสนใจ) */
-    --accent-color: #F59E0B; 
+    --accent-color: #F59E0B;
 }
 
 * {
@@ -26,4 +26,57 @@
 
 body {
     background-color: var(--bg-color);
+}
+
+/* nav-section */
+nav {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav .container {
+    max-width: 1440px;
+    padding: 2.25rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    transition: transform .3s ease;
+}
+
+.logo span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.logo:hover {
+    animation: shake-logo .6s ease-in-out infinite;
+}
+
+/* กำหนดสเต็ปการสั่น (หมุนซ้าย-ขวา) */
+@keyframes shake-logo {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); } /* เอียงซ้าย 5 องศา */
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(5deg); }  /* เอียงขวา 5 องศา */
+    100% { transform: rotate(0deg); }
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 1rem;
+    letter-spacing: 2px;
+    transition: color .3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
 }
