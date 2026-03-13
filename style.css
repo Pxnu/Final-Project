@@ -171,7 +171,7 @@ nav .container {
 .recommend-card .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .recommend-games {
@@ -233,17 +233,18 @@ nav .container {
 .main-card .card-container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
+    gap: 2rem;
 
 }
 
 .games {
     background-color: var(--card-bg);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    
 }
 
 .games:hover {
@@ -257,4 +258,9 @@ nav .container {
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
+}
+
+.games p {
+    font-size: 14px;
+    line-height: 2;
 }
