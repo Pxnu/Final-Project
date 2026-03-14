@@ -264,3 +264,52 @@ nav .container {
     font-size: 14px;
     line-height: 2;
 }
+
+/* =========================================
+   ส่วนจัดการปุ่ม See More
+   ========================================= */
+.see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; 
+}
+
+.see-more button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    /* เพิ่ม Flexbox ให้ตัวปุ่มเพื่อจัดระเบียบไอคอนและข้อความ */
+    display: flex;
+    flex-direction: column; /* ให้ลูกศรอยู่บน ข้อความอยู่ล่าง */
+    align-items: center; /* จัดให้อยู่กึ่งกลาง */
+    gap: 1rem; /* เพิ่มช่องว่างระหว่างลูกศรกับข้อความให้ดูพอดี ไม่อึดอัด */
+}
+
+/* จัดการขนาดและสีของไอคอนลูกศร */
+.see-more i {
+    font-size: 3rem; 
+    color: var(--text-color); 
+    transition: all 0.3s ease;
+}
+
+/* จัดการตัวหนังสือ See More */
+.see-more p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้: ให้เปลี่ยนสี "ทั้งลูกศรและข้อความ" พร้อมกัน */
+.see-more button:hover i,
+.see-more button:hover p {
+    color: var(--primary-color);
+}
+
+/* เพิ่มลูกเล่นให้ลูกศรพุ่งไปทางขวานิดนึงตอนเอาเมาส์ชี้ปุ่ม */
+.see-more button:hover i {
+    transform: translateX(8px);
+}
