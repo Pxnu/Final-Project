@@ -213,7 +213,7 @@ nav .container {
 }
 
 .game-category button{
-    margin: 2rem 1rem;
+    margin: 2rem .5rem;
     width: 100px;
     border-radius: 6px;
     outline: none;
@@ -263,6 +263,32 @@ nav .container {
 .games p {
     font-size: 14px;
     line-height: 2;
+}
+
+.game-tags {
+    display: flex;
+    gap: 0.5rem; /* ระยะห่างระหว่างแต่ละ Tag */
+    flex-wrap: wrap; /* ถ้าเนื้อหา Tag ยาวเกินไป ให้ปัดตกบรรทัดใหม่คลีนๆ */
+    margin-bottom: 1rem; /* ระยะห่างระหว่าง Tag กับชื่อเกมด้านล่าง */
+}
+
+.game-tags button {
+    background-color: transparent; /* พื้นหลังใส */
+    border: 1px solid var(--primary-color); /* กรอบสีเขียวตุ่น (สีหลัก) */
+    color: var(--primary-color); /* ตัวหนังสือสีเขียวตุ่น */
+    padding: 0.25rem 0.75rem; /* ให้ปุ่มมีความกะทัดรัด */
+    border-radius: 50px; /* ทริคทำขอบมนเป็นรูปแคปซูล */
+    font-size: 0.75rem; /* ขนาดฟอนต์เล็กกว่าเนื้อหาปกติ */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* เตรียมพร้อมสำหรับ Hover */
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ที่ Tag */
+.game-tags button:hover {
+    background-color: var(--primary-color); /* ถมสีพื้นหลังเป็นสีเขียว */
+    color: #FFFFFF; /* เปลี่ยนตัวหนังสือเป็นสีขาวให้ตัดกัน */
+    transform: translateY(-2px); /* ให้ Tag ลอยขึ้นมานิดๆ ดูมีชีวิตชีวา */
 }
 
 /* =========================================
